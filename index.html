@@ -1,0 +1,13 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta charset=utf8>
+<meta http-equiv="refresh" content=";data.xml?css=compact.css">
+<body>
+	<pre id=szk></pre>
+</body>
+<script>
+	$.get("data.txt", null, function(data){
+		$('#szk').text(data);
+	}, 'text').fail(function(){
+		$('body').text("Failed to load info");
+	});
+</script>

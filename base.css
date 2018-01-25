@@ -1,0 +1,143 @@
+#author::after {
+	content: ": ";
+}
+
+tranlator::before {
+	content: "Fordította: ";
+}
+
+details > * {
+	display: block;
+}
+
+details > comment {
+	font-style: italic;
+}
+
+aside {
+	position: absolute;
+	right: 1em;
+}
+
+.comment {
+	font-family: monospace;
+	white-space: pre;
+}
+.comment::before {
+	content: "[";
+}
+.comment::after {
+	content: "]";
+}
+
+place {
+	font-style: italic;
+}
+place::before {
+	content: "Szín: ";
+}
+
+.sentence > person {
+	font-weight: bold;
+}
+
+.sentence > manner {
+	font-style: italic;
+}
+.sentence > manner::before {
+	content: "(";
+}
+.sentence > manner::after {
+	content: ")";
+}
+
+.sentence > .text {
+	display: block;
+}
+
+.music::before {
+	content: "Zene: ";
+}
+
+aside > comment {
+	font-family: monospace;
+	white-space: pre;
+}
+aside > comment::before {
+	content: "[";
+}
+aside > comment::after {
+	content: "]";
+}
+
+.move  {
+	font-style: italic;
+}
+
+aside.move > person {
+	position: absolute;
+	color: transparent;
+	display: block;
+}
+
+.lights::before {
+	content: "Fények: ";
+}
+
+.lights > light-type {
+	font-style: italic;
+}
+.lights > light-type::after {
+	content: " ";
+}
+
+.lights > person::after {
+	content: "ra";
+}
+
+.hideable {
+	transition: color 1s ease-in;
+}
+
+.hidden {
+	color: transparent;
+	/* overflow: hidden; */
+}
+
+.act {
+	--section-type-name: "felvonás";
+}
+
+.scene {
+	--section-type-name: "jelenet";
+}
+
+main {
+	counter-reset: section1;
+}
+
+main > section::before {
+	counter-increment: section1;
+	content: counter(section1, upper-roman)". "var(--section-type-name, "felvonás");
+
+	counter-reset: section2;
+	
+	/* h2 behaviour */
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-block-start: .83em;
+	margin-block-end: .83em;
+}
+
+main > section > section::before {
+	counter-increment: section2;
+	content: counter(section2, decimal)". "var(--section-type-name, "jelenet");
+	
+	/* h3 behaviour */
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+}
