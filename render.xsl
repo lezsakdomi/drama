@@ -8,7 +8,7 @@
 		<html class="hideable">
 			<head>
 				<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,Promise.prototype.finally,URL|gated,setImmediate&amp;flags=gated&amp;rum=1">&nbsp;</script>
-				<script src="../jquery-3.2.1.js">&nbsp;</script>
+				<script src="jquery-3.2.1.min.js">&nbsp;</script>
 				<script src="render.js">&nbsp;</script>
 				<link rel="stylesheet" href="base.css"/>
 			</head>
